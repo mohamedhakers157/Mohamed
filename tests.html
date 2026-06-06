@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>إدارة التحاليل | مختبر الشفاء</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><i class="fas fa-flask"></i> مختبر الشفاء</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+        <li><a href="patients.html"><i class="fas fa-user-injured"></i> إضافة مريض</a></li>
+        <li><a href="staff.html"><i class="fas fa-user-nurse"></i> إضافة موظف</a></li>
+        <li><a href="tests.html" class="active"><i class="fas fa-vial"></i> التحاليل</a></li>
+        <li><a href="results.html"><i class="fas fa-clipboard-list"></i> النتائج</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> تواصل</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="form-section card">
+      <div class="section-header"><i class="fas fa-vial"></i><h2>إضافة تحليل طبي</h2></div>
+      <form id="testForm" class="modern-form" onsubmit="return false;">
+        <div class="form-group"><label><i class="fas fa-tag"></i> اسم التحليل</label><input type="text" id="testName" placeholder="مثال: سكر الدم، فيتامين د..." required></div>
+        <div class="form-row">
+          <div class="form-group"><label><i class="fas fa-arrow-down"></i> الحد الأدنى الطبيعي</label><input type="number" step="any" id="minValue" placeholder="أقل قيمة طبيعية" required></div>
+          <div class="form-group"><label><i class="fas fa-arrow-up"></i> الحد الأقصى الطبيعي</label><input type="number" step="any" id="maxValue" placeholder="أعلى قيمة طبيعية" required></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" onclick="addTest()"><i class="fas fa-plus-circle"></i> إضافة التحليل</button>
+      </form>
+      <div id="testSuccessMsg" class="success-msg" style="display:none;"></div>
+    </section>
+
+    <section class="list-section card">
+      <div class="section-header"><i class="fas fa-table"></i><h2>التحاليل المتاحة</h2></div>
+      <div class="table-responsive"><table class="modern-table"><thead><tr><th>اسم التحليل</th><th>الحد الأدنى</th><th>الحد الأقصى</th><th>النطاق الطبيعي</th><th>إجراء</th></tr></thead><tbody id="testsTableBody"></tbody></table></div>
+      <div id="noTestsMsg" class="empty-msg" style="display:none;"><i class="fas fa-info-circle"></i> لا توجد تحاليل مضافة بعد.</div>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 مختبر الشفاء للتحاليل الطبية. جميع الحقوق محفوظة.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

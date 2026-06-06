@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>نتائج التحاليل | مختبر الشفاء</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><i class="fas fa-flask"></i> مختبر الشفاء</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+        <li><a href="patients.html"><i class="fas fa-user-injured"></i> إضافة مريض</a></li>
+        <li><a href="staff.html"><i class="fas fa-user-nurse"></i> إضافة موظف</a></li>
+        <li><a href="tests.html"><i class="fas fa-vial"></i> التحاليل</a></li>
+        <li><a href="results.html" class="active"><i class="fas fa-clipboard-list"></i> النتائج</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> تواصل</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="form-section card">
+      <div class="section-header"><i class="fas fa-clipboard-check"></i><h2>إدخال نتيجة تحليل</h2></div>
+      <form id="resultForm" class="modern-form" onsubmit="return false;">
+        <div class="form-group"><label><i class="fas fa-user-injured"></i> اسم المريض</label><select id="resultPatient" required><option value="">اختر المريض</option></select></div>
+        <div class="form-group"><label><i class="fas fa-vial"></i> التحليل</label><select id="resultTest" required><option value="">اختر التحليل</option></select></div>
+        <div class="form-group"><label><i class="fas fa-percentage"></i> نتيجة التحليل</label><input type="number" step="any" id="resultValue" placeholder="أدخل القيمة الرقمية" required></div>
+        <button type="submit" class="btn btn-primary btn-block" onclick="addResult()"><i class="fas fa-save"></i> حفظ النتيجة</button>
+      </form>
+      <div id="resultSuccessMsg" class="success-msg" style="display:none;"></div>
+    </section>
+
+    <section class="list-section card">
+      <div class="section-header"><i class="fas fa-history"></i><h2>سجل النتائج</h2></div>
+      <div class="table-responsive"><table class="modern-table"><thead><tr><th>المريض</th><th>التحليل</th><th>النتيجة</th><th>النطاق الطبيعي</th><th>الحالة</th><th>إجراء</th></tr></thead><tbody id="resultsTableBody"></tbody></table></div>
+      <div id="noResultsMsg" class="empty-msg" style="display:none;"><i class="fas fa-info-circle"></i> لا توجد نتائج مسجلة.</div>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 مختبر الشفاء للتحاليل الطبية. جميع الحقوق محفوظة.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

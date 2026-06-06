@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>إضافة موظف | مختبر الشفاء</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><i class="fas fa-flask"></i> مختبر الشفاء</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+        <li><a href="patients.html"><i class="fas fa-user-injured"></i> إضافة مريض</a></li>
+        <li><a href="staff.html" class="active"><i class="fas fa-user-nurse"></i> إضافة موظف</a></li>
+        <li><a href="tests.html"><i class="fas fa-vial"></i> التحاليل</a></li>
+        <li><a href="results.html"><i class="fas fa-clipboard-list"></i> النتائج</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> تواصل</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="form-section card">
+      <div class="section-header"><i class="fas fa-user-nurse"></i><h2>إضافة ممرض / موظف</h2></div>
+      <form id="staffForm" class="modern-form" onsubmit="return false;">
+        <div class="form-group"><label><i class="fas fa-user"></i> اسم الممرض / الموظف</label><input type="text" id="staffName" placeholder="الاسم الكامل" required></div>
+        <div class="form-group"><label><i class="fas fa-stethoscope"></i> التخصص</label><input type="text" id="staffSpecialty" placeholder="مثال: تمريض، تحاليل..." required></div>
+        <div class="form-group"><label><i class="fas fa-phone"></i> رقم الهاتف</label><input type="tel" id="staffPhone" placeholder="رقم الهاتف" required></div>
+        <div class="form-group"><label><i class="fas fa-envelope"></i> البريد الإلكتروني</label><input type="email" id="staffEmail" placeholder="example@lab.com" required></div>
+        <button type="submit" class="btn btn-primary btn-block" onclick="addStaff()"><i class="fas fa-plus-circle"></i> إضافة</button>
+      </form>
+      <div id="staffSuccessMsg" class="success-msg" style="display:none;"></div>
+    </section>
+
+    <section class="list-section card">
+      <div class="section-header"><i class="fas fa-users"></i><h2>الموظفين المسجلين</h2></div>
+      <div class="table-responsive"><table class="modern-table"><thead><tr><th>الاسم</th><th>التخصص</th><th>الهاتف</th><th>البريد الإلكتروني</th><th>إجراء</th></tr></thead><tbody id="staffTableBody"></tbody></table></div>
+      <div id="noStaffMsg" class="empty-msg" style="display:none;"><i class="fas fa-info-circle"></i> لا يوجد موظفين مسجلين.</div>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 مختبر الشفاء للتحاليل الطبية. جميع الحقوق محفوظة.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

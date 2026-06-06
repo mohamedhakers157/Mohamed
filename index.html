@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>مختبر الشفاء للتحاليل الطبية | الرئيسية</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><i class="fas fa-flask"></i> مختبر الشفاء</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+        <li><a href="patients.html"><i class="fas fa-user-injured"></i> إضافة مريض</a></li>
+        <li><a href="staff.html"><i class="fas fa-user-nurse"></i> إضافة موظف</a></li>
+        <li><a href="tests.html"><i class="fas fa-vial"></i> التحاليل</a></li>
+        <li><a href="results.html"><i class="fas fa-clipboard-list"></i> النتائج</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> تواصل</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="hero-banner">
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h1><i class="fas fa-microscope"></i> مختبر الشفاء للتحاليل الطبية</h1>
+          <p>دقة، سرعة، وموثوقية في نتائج التحاليل الطبية. نستخدم أحدث التقنيات لنوفر لك تشخيصًا دقيقًا.</p>
+          <div class="hero-buttons">
+            <a href="patients.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> إضافة مريض</a>
+            <a href="tests.html" class="btn btn-secondary"><i class="fas fa-vial"></i> إدارة التحاليل</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section card">
+      <div class="section-header"><i class="fas fa-info-circle"></i><h2>من نحن</h2></div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>مختبر الشفاء هو أحدث مختبر طبي مجهز بأعلى المعايير العالمية. نقدم خدمات التحاليل الطبية الشاملة بدقة وسرعة فائقة. فريقنا من أمهر الأطباء والفنيين المتخصصين.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> أحدث الأجهزة الطبية</li>
+            <li><i class="fas fa-check-circle"></i> فريق طبي متمرس</li>
+            <li><i class="fas fa-check-circle"></i> نتائج دقيقة وسريعة</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <div class="lab-illustration"><i class="fas fa-flask"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-card"><i class="fas fa-users"></i><h3>المرضى</h3><p class="stat-number" id="patientStat">0</p></div>
+        <div class="stat-card"><i class="fas fa-vials"></i><h3>التحاليل</h3><p class="stat-number" id="testStat">0</p></div>
+        <div class="stat-card"><i class="fas fa-user-md"></i><h3>الموظفين</h3><p class="stat-number" id="staffStat">0</p></div>
+        <div class="stat-card"><i class="fas fa-clipboard-check"></i><h3>النتائج</h3><p class="stat-number" id="resultStat">0</p></div>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <h2><i class="fas fa-link"></i> خدماتنا السريعة</h2>
+      <div class="links-grid">
+        <a href="patients.html" class="quick-link-card"><i class="fas fa-user-plus"></i><span>تسجيل مريض جديد</span></a>
+        <a href="tests.html" class="quick-link-card"><i class="fas fa-vial"></i><span>إدارة التحاليل</span></a>
+        <a href="results.html" class="quick-link-card"><i class="fas fa-clipboard-list"></i><span>إدخال النتائج</span></a>
+        <a href="contact.html" class="quick-link-card"><i class="fas fa-phone-alt"></i><span>اتصل بنا</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 مختبر الشفاء للتحاليل الطبية. جميع الحقوق محفوظة.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
